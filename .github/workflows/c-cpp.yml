@@ -13,7 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install tree
+      run: sudo apt -y update && sudo apt -y install tree
     - name: cmake
       run: cmake .
     - name: make
       run: make
+    - name: tree
+      run: tree
